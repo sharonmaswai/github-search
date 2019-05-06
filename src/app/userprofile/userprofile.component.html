@@ -1,0 +1,50 @@
+<div class="container-fluid">
+  <h2 class="heading">Git Search</h2>
+  <div>
+    <div class='col-md-6'>
+
+    </div>
+    <form (ngSubmit)='getuserprofile()'>
+      <div class="form-group">
+          <input type="text" class="form-control" placeholder="enter username" 
+          name="username">
+          <button class="badge badge-info ok " type="submit">Search</button>
+      </div>
+
+
+    </form>
+  </div>
+  <div class=container-fluid>
+    <div class="col-md-12">
+      <div *ngIf="profile">
+        <div class="panel panel-info">
+          <div class="panel-heading">
+            <h2>{{profile.login}}</h2>
+          </div>
+          <div class="panel-body">
+            <div class="row">
+              <div class="col-md-04">
+                <img class="img-circle img-responsive me" src="{{profile.avatar_url}}">
+
+              </div>
+              <div col-md-04>
+                  <ul class="list-group">
+                      <li class="list-group-item"><strong>Username: </strong>{{profile.login}}</li>
+  
+                      <div class="stats">
+                        <span class="badge badge-secondary">{{profile.public_repos}} Public Repos</span> 
+                        <span class="badge badge-primary">{{profile.public_gists}} Public Gists</span> 
+                        <span class="badge badge-success">{{profile.followers}} Followers</span> 
+                        <span class="badge badge-info">{{profile.following}} Following</span>
+                      </div>
+                    </ul>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
