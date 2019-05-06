@@ -8,7 +8,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { UserprofileComponent } from './userprofile/userprofile.component';
+import { RouterModule, Routes } from '@angular/router';
+import { RoutingModule } from './routing/routing.module';
 import { HomepageComponent } from './homepage/homepage.component';
+
+const routes:Routes=[
+  {path:"userprofile",component:UserprofileComponent},
+  {path:"",redirectTo:"/homepage",pathMatch:"full"},
+  {path:"homepage", component:HomepageComponent}
+]
 
 @NgModule({
   declarations: [
@@ -21,7 +29,10 @@ import { HomepageComponent } from './homepage/homepage.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    RouterModule.forRoot(routes),
+    RoutingModule
+
   ],
   providers: [UserserviceService],
   bootstrap: [AppComponent]
