@@ -6,7 +6,7 @@
     </div>
     <form (ngSubmit)='getuserprofile()'>
       <div class="form-group">
-          <input type="text" class="form-control" placeholder="enter username" 
+          <input type="text" class="form-control" placeholder="enter username" [(ngModel)]="username" 
           name="username">
           <button class="btn-info " type="submit">Search</button>
       </div>
@@ -16,7 +16,7 @@
   </div>
   <div class=container-fluid>
     <div class="col-md-12">
-      <div>
+      <div *ngIf="profile">
         <div class="panel panel-info">
           <div class="panel-heading">
             <h2></h2>
