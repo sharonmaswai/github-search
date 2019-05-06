@@ -8,7 +8,7 @@
       <div class="form-group">
           <input type="text" class="form-control" placeholder="enter username" 
           name="username">
-          <button class="badge badge-info ok " type="submit">Search</button>
+          <button class="btn-info " type="submit">Search</button>
       </div>
 
 
@@ -16,34 +16,33 @@
   </div>
   <div class=container-fluid>
     <div class="col-md-12">
-      <div *ngIf="profile">
+      <div>
         <div class="panel panel-info">
           <div class="panel-heading">
-            <h2>{{profile.login}}</h2>
+            <h2></h2>
           </div>
           <div class="panel-body">
             <div class="row">
               <div class="col-md-04">
-                <img class="img-circle img-responsive me" src="{{profile.avatar_url}}">
+                <img class="img-circle img-responsive me" src="">
 
               </div>
               <div col-md-04>
                   <ul class="list-group">
-                      <li class="list-group-item"><strong>Username: </strong>{{profile.login}}</li>
+                      <li class="list-group-item"><strong>{{profile.login}}</strong>{{profile.login}}</li>
   
-                      <div class="stats">
-                        <span class="badge badge-secondary">{{profile.public_repos}} Public Repos</span> 
+                      <div class="details">
+                        <p>{{profile.public_repos}} Public Repos</p> 
                      
-                        <span class="badge badge-success">{{profile.followers}} Followers</span> 
-                        <span class="badge badge-info">{{profile.following}} Following</span>
+                        <p>{{profile.followers}} Followers</p> 
+                        <p>{{profile.following}} Following</p>
                       </div>
                     </ul>
               </div>
               <div class="col-md-4">
                 <div class="repos">
 
-                  <h2>Repos</h2>
-
+                  
                 </div>
               </div>
 
