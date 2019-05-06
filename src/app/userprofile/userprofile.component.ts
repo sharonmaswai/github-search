@@ -10,6 +10,7 @@ export class UserprofileComponent implements OnInit {
   
   private userprofile: any=[];
   private username: string;
+  private repositories: any = [];
 
   constructor( private userserviceService: UserserviceService) {}
 
@@ -21,7 +22,9 @@ export class UserprofileComponent implements OnInit {
     this.userserviceService.fetchProfileDetails(this.username).subscribe(profile => {
       this.userprofile = profile;
    });
-  
+   this.userserviceService.fetchRepos().subscribe(repos => {
+    this.repositories = repos;
+  });
    
 
   }
