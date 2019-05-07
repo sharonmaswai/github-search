@@ -4,7 +4,26 @@
 
 This is an app that enables you to search for github users, checkout their profiles and repositories.
 
+## Setup
+
+Go to your browser.
+
+
+Log into your Github account or sign up for one if you do not have one then visit my github handle: sharonmasai to access my repositories.
+
+
+Fork the 'gitsearch' repository and use the app in your own account..
+
+
 ## BDD
+
+Behavior: The user enters a GitHub username.
+Input: Enter the username.
+Output: User’s profile, repositories, forks, watchers, followers and following.
+
+
+
+
 
 
 ## Bugs
@@ -12,16 +31,6 @@ This is an app that enables you to search for github users, checkout their profi
 There were no known bugs at the time of deployment.
 
 
-
-## Setup
-
-Go to your browser.
-
-
-
-Log into your Github account or sign up for one if you do not have one then visit my github handle: sharonmasai to access my repositories.
-
-Fork the 'gitsearch' repository and use the app.
 
 
 ## Technologies used
@@ -52,4 +61,5 @@ If you encounter any issues  contact me through chepsharonmaswai@gamil.com
 
 
 ## License
+
 [MIT](https://choosealicense.com/licenses/mit/)
