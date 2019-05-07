@@ -1,9 +1,10 @@
-<div class="container-fluid">
+<div id="searchpage" class="container-fluid">
   <h2 class="heading">Git Search</h2>
+  <a id="link" routerLink='/homepage' routerLinkActive='active'>Back</a>
   <div>
-    <div class='col-md-6'>
+    
 
-    </div>
+    
     <form (ngSubmit)='getuserprofile()'>
       <div class="form-group">
           <input type="text" class="form-control" placeholder="enter username" [(ngModel)]="username" 
@@ -14,54 +15,4 @@
 
     </form>
   </div>
-  <div class=container-fluid>
-    <div class="col-md-12">
-      <div *ngIf="profile">
-        <div class="panel panel-info">
-          <div class="panel-heading">
-            <h2></h2>
-          </div>
-          <div class="panel-body">
-            <div class="row">
-              <div class="col-md-04">
-                <img class="img-circle img-responsive me" src="">
-
-              </div>
-              <div col-md-04>
-                  <ul class="list-group">
-                      <li class="list-group-item"><strong>{{profile.login}}</strong>{{profile.login}}</li>
-  
-                      <div class="details">
-                        <p>{{profile.public_repos}} Public Repos</p> 
-                     
-                        <p>{{profile.followers}} Followers</p> 
-                        <p>{{profile.following}} Following</p>
-                      </div>
-                    </ul>
-              </div>
-              <div class="col-md-4">
-                <div class="repos">
-                  <h4>Repositories</h4>
-                  <div *ngFor="let repo of repos">
-                    <div class="col-md-8">
-                      <p><a href="{{repo.html_url}}">{{repo.name}}</a></p>
-                      <p>{{repo.description}}</p>
-                    </div>
-                    <div class="col-md-4">
-                      <span>{{repo.forks}} Forks</span>
-                      <span>{{repo.watchers}} Watchers</span>
-                    </div>
-                  </div>  
-                  
-                </div>
-              </div>
-
-
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</div>
+</div>  

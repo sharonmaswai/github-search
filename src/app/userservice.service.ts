@@ -12,9 +12,9 @@ export class UserserviceService {
     this.username='sharonmaswai';
   }
  fetchProfileDetails(username) {
-    return this.http.get("https://api.github.com/users/" + this.username + "?client_id=" + this.clientid + "&client_secret=" + this.clientsecret);
+    return this.http.get('https://api.github.com/users/' + this.username + "?client_id=" + this.clientid + "&client_secret=" + this.clientsecret);
   } 
   fetchRepos() {
-    return this.http.get("https://api.github.com/users/" + this.username + "?client_id=" + this.clientid + "&client_secret=" + this.clientsecret);
+    return this.http.get('https://api.github.com/users/' + this.username + "/repos?client_id=" + this.clientid + "&client_secret=" + this.clientsecret);
   } 
 }
