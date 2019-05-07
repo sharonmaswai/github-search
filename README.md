@@ -7,6 +7,11 @@ This is an app that enables you to search for github users, checkout their profi
 ## BDD
 
 
+## Bugs
+
+There were no known bugs at the time of deployment.
+
+
 
 ## Setup
 
@@ -40,9 +45,10 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Support
+
+If you encounter any issues  contact me through chepsharonmaswai@gamil.com
 
 
 ## License
