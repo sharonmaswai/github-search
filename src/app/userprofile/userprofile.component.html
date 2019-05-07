@@ -15,8 +15,70 @@
 
     </form>
   </div>
-  <div *ngIf='profile'>
-     <p>{{profile.name}}</p> <small>{{profile.login}}</small>
-     
+  <div class="col-md-12">
+      <div *ngIf='profile'>
+          <div class="panel panel-default">
+            <div class="panel-heading" >
+                <p>{{profile.name}}</p>
+            </div>
+            <div class="panel-body">
+              <div class="row" >
+                <div class="col-md-04" >
+                    <img class="img-circle img-responsive me" src="{{profile.avatar_url}}" >
+                </div>
+                <div class="col-md-04" >
+                    <ul class="list-group">
+                        <li class="list-group-item"><strong>Username: </strong>{{profile.login}}</li>
+    
+                        <div class="stats">
+                          <span class="btn btn-info">{{profile.public_repos}} Public Repos</span> 
+                          <span class="btn btn-info">{{profile.public_gists}} Public Gists</span> 
+                          <span class="btn btn-info">{{profile.followers}} Followers</span> 
+                          <span class="btn btn-info">{{profile.following}} Following</span>
+                        </div>
+                      </ul>
+    
+
+                  </div>
+                  <div class="col-md-04" >
+                    <div class="card-default">
+                      <div class="card-heading" >
+                         <p>Repositories</p>
+                      </div>
+                      <div class="card-body" >
+                        <div class="row" >
+                         <div class="col-md-12" >
+                           <div *ngFor="let repo of repos" >
+                              <div class="col-md-8" >
+                                  <p><a href="{{repo.html_url}}" target="_blank">{{repo.name}}</a></p>
+                                  <p>{{repo.description}}</p>
+    
+                               </div>
+                               <div class="col-md-04" >
+                                  
+                                  <span class="btn btn-info">{{repo.forks}} Forks</span>
+                                  <span class="btn btn-info">{{repo.watchers}} Watchers</span>
+    
+                               </div>
+                           </div>
+                           
+
+                         </div>
+                        </div>
+                      </div>
+
+                    </div>
+
+                    </div>
+
+              </div>
+      
+            </div>
+          </div>
+           
+           
+        </div>
+
   </div>
+  
 </div>  
