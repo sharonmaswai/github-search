@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {FormsModule} from '@angular/forms';
+import { HttpClient} from "@angular/common/http";
 import {UserserviceService} from '../userservice.service'
+import { Profile } from 'selenium-webdriver/firefox';
 @Component({
   selector: 'app-userprofile',
   templateUrl: './userprofile.component.html',
@@ -8,9 +9,9 @@ import {UserserviceService} from '../userservice.service'
 })
 export class UserprofileComponent implements OnInit {
   
-  private userprofile: any=[];
-  private username: string;
-  private repositories: any = [];
+  profile: any[];
+  username: string;
+  repos: any = [];
 
   constructor( private userserviceService: UserserviceService) {}
 
@@ -18,12 +19,14 @@ export class UserprofileComponent implements OnInit {
   ngOnInit() {
   }
   getuserprofile(){
-
-    this.userserviceService.fetchProfileDetails(this.username).subscribe(profile => {
-      this.userprofile = profile;
+    
+    this.userserviceService.fetchProfileDetails().subscribe(profile => {
+      this.profile = profile ;
+      console.log(profile);
    });
    this.userserviceService.fetchRepos().subscribe(repos => {
-    this.repositories = repos;
+    this.repos = repos;
+    console.log(repos)
   });
    
 

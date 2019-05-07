@@ -1,7 +1,5 @@
-#searchpage {
-    background-image: url("https://theoacp.org/wp-content/uploads/2018/09/Dark-Blue-Background-Wallpaperdark-blue-background-wallpaper-1920x1080-lockscreen-PIC-WPXH671203.jpg");
-    font-family: 'Patrick Hand', cursive;
-    background-repeat: no-repeat;
-    color: white;
-    font-size: 20px;
+.form-group {
+    margin-right: 300px;
+    margin-left: 300px;
+    margin-top: 300px;
 }

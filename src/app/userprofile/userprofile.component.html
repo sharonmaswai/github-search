@@ -1,18 +1,22 @@
 <div id="searchpage" class="container-fluid">
-  <h2 class="heading">Git Search</h2>
+  <h2  style="text-align: center;" class="heading">Git Search</h2>
   <a id="link" routerLink='/homepage' routerLinkActive='active'>Back</a>
-  <div>
+  <div class="searchform">
     
 
     
-    <form (ngSubmit)='getuserprofile()'>
+    <form action="" class="search-form">
       <div class="form-group">
           <input type="text" class="form-control" placeholder="enter username" [(ngModel)]="username" 
-          name="username">
+          name="username" (keyup)=fetchRepos() (keyup)="fetchProfileDetails()">
           <button class="btn-info " type="submit">Search</button>
       </div>
 
 
     </form>
+  </div>
+  <div *ngIf='profile'>
+     <p>{{profile.name}}</p> <small>{{profile.login}}</small>
+     
   </div>
 </div>  
